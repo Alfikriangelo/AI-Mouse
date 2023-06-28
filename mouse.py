@@ -28,7 +28,6 @@ while True:
     img = detector.findHands(img)
     lmList, bbox = detector.findPosition(img)
 
-    # 2. get the tip of the index and middle fingers
     if len(lmList) != 0:
         x1, y1 = lmList[8][1:]
         x2, y2 = lmList[12][1:]
